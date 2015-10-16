@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>drxCCClass</class>
+ <widget class="QMainWindow" name="drxCCClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>338</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>drxCC - und3ath Kernel Exploiter | v0.2 | Private Build</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Notify Routines</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="comboBox">
+          <item>
+           <property name="text">
+            <string>ProcessNotifyRoutine</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ThreadNotifyRoutine</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ImageNotifyRoutine</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>RegisterNotifyRoutine</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ObjectNotifyRoutine</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="lineEdit_callback"/>
+        </item>
+        <item row="2" column="1">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="pushButton_getNotifyRoutine">
+          <property name="text">
+           <string>Get Routines</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="QTreeWidget" name="treeWidget_callbackList">
+          <property name="uniformRowHeights">
+           <bool>true</bool>
+          </property>
+          <property name="animated">
+           <bool>true</bool>
+          </property>
+          <attribute name="headerDefaultSectionSize">
+           <number>200</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>PTR</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Information</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="pushButton_derefCallback">
+          <property name="text">
+           <string>Dereference Callback !</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+       <zorder>treeWidget_callbackList</zorder>
+       <zorder>comboBox</zorder>
+       <zorder>lineEdit_callback</zorder>
+       <zorder>horizontalSpacer</zorder>
+       <zorder>horizontalSpacer_2</zorder>
+       <zorder>pushButton_getNotifyRoutine</zorder>
+       <zorder>pushButton_derefCallback</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Minifilter</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>111</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Get Minifilters</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Drx Sys</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>10</y>
+          <width>261</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Protect Process</string>
+        </property>
+        <widget class="QRadioButton" name="radioButton_enablePProcess">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Enable</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_disablePProcess">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>20</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Disable</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_pid_pProcess">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>20</y>
+           <width>81</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>21</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PID</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_setPProcess">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>101</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>121</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Nt-Authority\System</string>
+        </property>
+        <widget class="QSpinBox" name="spinBox_pid">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>20</y>
+           <width>71</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PID</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_godShell">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>91</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="drxcc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
